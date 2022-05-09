@@ -352,6 +352,7 @@
 -r:"Library/Bee/artifacts/1900b0aE.dag/VSSettingsProvider.ref.dll"
 "Assets/Combat.cs"
 "Assets/CopyPOS_ROT.cs"
+"Assets/RotatingMill.cs"
 "Assets/Scripts/AbilityDamage.cs"
 "Assets/Scripts/Billboard.cs"
 "Assets/Scripts/CameraLock.cs"
