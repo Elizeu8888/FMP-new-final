@@ -33,7 +33,7 @@ public class GrappleV2 : MonoBehaviour
     bool grappleMode = false, canGrapple = false;
     public float pullSpeed, upSpeed, pullCloseDistance, lensValue;
     bool canPlayAnim;
-
+    public PlayerWalk plyScript;
 
     void Start()
     {
@@ -42,10 +42,23 @@ public class GrappleV2 : MonoBehaviour
 
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.LeftControl))
+        if (Input.GetKeyDown(KeyCode.LeftControl) && grappleMode == true)
         {
-            grappleMode = !grappleMode;
+            grappleMode = false;
+            plyScript.state = 1;
         }
+        else if (Input.GetKeyDown(KeyCode.LeftControl) && grappleMode == false && plyScript.state != 2)
+        {
+            grappleMode = true;
+        }
+
+        if(grappleMode == true)
+        {
+            plyScript.state = 3;
+        }
+
+
+
 
         if (isgrappling == true || isgrappling2 == true)
         {

@@ -46,7 +46,7 @@ public class PlayerWeaponManager : MonoBehaviour
     void Update()
     {
         anim.SetFloat("speedanim", weaponList[weaponNumber].GetSpeed());
-        if (Input.GetKeyDown("f"))
+        if (Input.GetKeyDown("f") && playerScript.state != 3)
         {
             if (weapondrawn == false)
             {
@@ -156,6 +156,7 @@ public class PlayerWeaponManager : MonoBehaviour
     public void WeaponLauncher()
     {
         WeaponActivate(weapons[weaponNumber]);
+        playerScript.state = 2;
     }
     public void DealDamage()
     {
@@ -164,7 +165,8 @@ public class PlayerWeaponManager : MonoBehaviour
         
     public void RunicRedraw()
     {
-        Destroy(weapon);      
+        Destroy(weapon);
+        playerScript.state = 1;
     }
         
     public void LayerWeight()

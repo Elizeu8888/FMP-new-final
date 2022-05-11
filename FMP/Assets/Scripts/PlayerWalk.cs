@@ -4,6 +4,10 @@ using UnityEngine;
 
 public class PlayerWalk : MonoBehaviour
 {
+
+    public int state = 1;
+    public GameObject weaponUI, normalUI, grappleUI;
+
     public bool attacking,specialattacking;
     public Rigidbody rb;
     public Transform cam, camAIM;
@@ -25,6 +29,31 @@ public class PlayerWalk : MonoBehaviour
     Vector3 direction;
     public GrappleV2 grappleScript;
 
+    void UIstate()
+    {
+        if(state == 1)
+        {
+            normalUI.SetActive(true);
+            grappleUI.SetActive(false);
+            weaponUI.SetActive(false);
+        }
+        else if(state == 2)
+        {
+            normalUI.SetActive(false);
+            grappleUI.SetActive(false);
+            weaponUI.SetActive(true);
+        }
+        else if(state == 3)
+        {
+            normalUI.SetActive(false);
+            grappleUI.SetActive(true);
+            weaponUI.SetActive(false);
+        }
+    }
+
+
+
+
     void Start()
     {
         Cursor.lockState = CursorLockMode.Locked;
@@ -34,6 +63,9 @@ public class PlayerWalk : MonoBehaviour
 
     void Update()
     {
+
+        UIstate();
+
         float horizontal = Input.GetAxisRaw("Horizontal");
         float vertical = Input.GetAxisRaw("Vertical");// uses imput to find direction
         direction = new Vector3(horizontal, 0f, vertical).normalized;
@@ -67,12 +99,6 @@ public class PlayerWalk : MonoBehaviour
             anim.SetBool("attacking", false);
             attacking = false;
         }
-
-
-
-
-
-
 
         //-----------------------------------------------------------------
         if (isgrounded == false)
