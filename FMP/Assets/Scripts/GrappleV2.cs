@@ -34,6 +34,7 @@ public class GrappleV2 : MonoBehaviour
     public float pullSpeed, upSpeed, pullCloseDistance, lensValue;
     bool canPlayAnim;
     public PlayerWalk plyScript;
+    public PlayerWeaponManager weapScript;
 
     void Start()
     {
@@ -45,19 +46,26 @@ public class GrappleV2 : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.LeftControl) && grappleMode == true)
         {
             grappleMode = false;
-            plyScript.state = 1;
         }
-        else if (Input.GetKeyDown(KeyCode.LeftControl) && grappleMode == false && plyScript.state != 2)
+        else if (Input.GetKeyDown(KeyCode.LeftControl) && grappleMode == false)
         {
+            weapScript.weapondrawn = false;
+            plyScript.state = 3;
             grappleMode = true;
         }
 
-        if(grappleMode == true)
+        if(weapScript.weapondrawn == false && grappleMode == false)
         {
-            plyScript.state = 3;
+            plyScript.state = 1;
         }
 
 
+
+
+        if(plyScript.state == 2)
+        {
+            grappleMode = false;
+        }
 
 
         if (isgrappling == true || isgrappling2 == true)

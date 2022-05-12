@@ -46,7 +46,7 @@ public class PlayerWeaponManager : MonoBehaviour
     void Update()
     {
         anim.SetFloat("speedanim", weaponList[weaponNumber].GetSpeed());
-        if (Input.GetKeyDown("f") && playerScript.state != 3)
+        if (Input.GetKeyDown("f"))
         {
             if (weapondrawn == false)
             {
@@ -78,7 +78,7 @@ public class PlayerWeaponManager : MonoBehaviour
 
     public void Attack()
     {
-        if(comboStep == 0)
+        if(comboStep == 0 && weapondrawn == true)
         {
             anim.Play("attack1");
             comboStep = 1;
@@ -156,7 +156,7 @@ public class PlayerWeaponManager : MonoBehaviour
     public void WeaponLauncher()
     {
         WeaponActivate(weapons[weaponNumber]);
-        playerScript.state = 2;
+        
     }
     public void DealDamage()
     {
@@ -166,7 +166,6 @@ public class PlayerWeaponManager : MonoBehaviour
     public void RunicRedraw()
     {
         Destroy(weapon);
-        playerScript.state = 1;
     }
         
     public void LayerWeight()
@@ -177,6 +176,7 @@ public class PlayerWeaponManager : MonoBehaviour
     public void Weapon1()
     {
         anim.SetLayerWeight(1, 1);
+        playerScript.state = 2;
         anim.SetBool("weaponOUT", true);
         weaponNumber = 0;
         weaponMenu.SetActive(false);
@@ -184,6 +184,7 @@ public class PlayerWeaponManager : MonoBehaviour
     public void Weapon2()
     {
         anim.SetLayerWeight(1, 1);
+        playerScript.state = 2;
         anim.SetBool("weaponOUT", true);
         weaponNumber = 1;
         weaponMenu.SetActive(false);
@@ -191,6 +192,7 @@ public class PlayerWeaponManager : MonoBehaviour
     public void Weapon3()
     {
         anim.SetLayerWeight(1, 1);
+        playerScript.state = 2;
         anim.SetBool("weaponOUT", true);
         weaponNumber = 2;
         weaponMenu.SetActive(false);
@@ -198,6 +200,7 @@ public class PlayerWeaponManager : MonoBehaviour
     public void Weapon4()
     {
         anim.SetLayerWeight(1, 1);
+        playerScript.state = 2;
         anim.SetBool("weaponOUT", true);
         weaponNumber = 3;
         weaponMenu.SetActive(false);
