@@ -60,12 +60,6 @@ public class PlayerWeaponManager : MonoBehaviour
             
         }
 
-
-        if (weaponMenu.activeSelf)           
-            Cursor.lockState = CursorLockMode.Confined;
-        else
-            Cursor.lockState = CursorLockMode.Locked;
-
         if (weapondrawn == false)
         {
             anim.SetBool("weaponOUT", false);

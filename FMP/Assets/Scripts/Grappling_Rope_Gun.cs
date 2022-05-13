@@ -15,6 +15,7 @@ public class Grappling_Rope_Gun : MonoBehaviour
     public float waveCount;
     public float waveHeight;
     public AnimationCurve affectCurve;
+    public GameObject pos;
 
     void Awake()
     {
@@ -23,9 +24,11 @@ public class Grappling_Rope_Gun : MonoBehaviour
     }
 
     //Called after Update
-    void LateUpdate()
+    void FixedUpdate()
     {
         DrawRope();
+        transform.position = pos.transform.position;
+        transform.rotation = pos.transform.rotation;
     }
 
     void DrawRope()

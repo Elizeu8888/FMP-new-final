@@ -31,7 +31,7 @@ public class GrappleV2 : MonoBehaviour
 
     public Animator anim, golAnim;
     bool grappleMode = false, canGrapple = false;
-    public float pullSpeed, upSpeed, pullCloseDistance, lensValue;
+    public float pullSpeed, upSpeed, pullCloseDistance, lensValue, endThrust;
     bool canPlayAnim;
     public PlayerWalk plyScript;
     public PlayerWeaponManager weapScript;
@@ -194,6 +194,7 @@ public class GrappleV2 : MonoBehaviour
         if (Input.GetMouseButton(0) && distancefrompoint <= pullCloseDistance && canPlayAnim == true)
         {
             anim.Play("flip");
+            rb.AddForce(transform.up * endThrust * Time.deltaTime, ForceMode.Impulse);
             canPlayAnim = false;
         }
 

@@ -9,9 +9,10 @@ public class EnemyAI : MonoBehaviour
     bool ishurt, cantakedamage;
 
     Transform player;
+    QuestManager questscript;
     public Transform lips;
     Rigidbody rigidB;
-
+    bool die = true;
     public LayerMask whatIsGround, whatIsPlayer;
 
     public GameObject bullet, damageText, bloodSplat;
@@ -41,11 +42,10 @@ public class EnemyAI : MonoBehaviour
         //player.gameObject.GetComponent<Combat>().Deadagainlol();
     }
 
-
-
     private void Awake()
     {
         player = GameObject.Find("player").transform;
+        questscript = GameObject.Find("QuestManager").GetComponent<QuestManager>();
         rigidB = GetComponent<Rigidbody>();
         agent = GetComponent<NavMeshAgent>();
     }
@@ -73,17 +73,24 @@ public class EnemyAI : MonoBehaviour
     }
     private void Update()
     {
+        if (anim.GetCurrentAnimatorStateInfo(0).IsName("dead") && die == true)
+        {
+            questscript.questprogress += 1;
+            die = false;
+        }
 
-        if(anim.GetCurrentAnimatorStateInfo(0).IsName("hurt"))
+
+
+
+        if (anim.GetCurrentAnimatorStateInfo(0).IsName("hurt"))
         {
             //agent.enabled = false;
             rigidB.isKinematic = false;
             agent.updatePosition = false;
             rigidB.AddForce(transform.forward * -52f * Time.deltaTime, ForceMode.Impulse);
             rigidB.AddForce(transform.up * 32f * Time.deltaTime, ForceMode.Impulse);
-            //agent.velocity = rigidB.velocity;
-            ishurt = true;
-            
+            agent.SetDestination(transform.position);
+            ishurt = true;            
         }
         else if(!anim.GetCurrentAnimatorStateInfo(0).IsName("hurt"))
         {
