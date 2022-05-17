@@ -111,11 +111,9 @@ Library\Bee\artifacts\movedfrom\UnityEngine.VirtualTexturingModule.dll_442227482
 Library\Bee\artifacts\movedfrom\UnityEngine.VRModule.dll_17937301547544270961.movedfrom
 Library\Bee\artifacts\movedfrom\UnityEngine.WindModule.dll_14163414779430760877.movedfrom
 Library\Bee\artifacts\movedfrom\UnityEngine.XRModule.dll_3147131845555725775.movedfrom
-Library\Bee\artifacts\movedfrom\UnityEditor.iOS.Extensions.Common.dll_15906812154131722174.movedfrom
-Library\Bee\artifacts\movedfrom\UnityEditor.iOS.Extensions.Xcode.dll_6015445956266573934.movedfrom
-Library\Bee\artifacts\movedfrom\Unity.Burst.Cecil.dll_14833953049528376334.movedfrom
-Library\Bee\artifacts\movedfrom\Unity.Burst.Cecil.Mdb.dll_6172782965712024267.movedfrom
-Library\Bee\artifacts\movedfrom\Unity.Burst.Cecil.Pdb.dll_7853320996937135182.movedfrom
-Library\Bee\artifacts\movedfrom\Unity.Burst.Cecil.Rocks.dll_9697954115014765102.movedfrom
-Library\Bee\artifacts\movedfrom\Unity.Burst.Unsafe.dll_6343815210843283493.movedfrom
-Library\Bee\artifacts\movedfrom\Unity.VisualScripting.Antlr3.Runtime.dll_15970439027800106835.movedfrom
+Library\Bee\artifacts\movedfrom\Unity.Burst.Cecil.dll_16282944698982646827.movedfrom
+Library\Bee\artifacts\movedfrom\Unity.Burst.Cecil.Mdb.dll_3569263925823027752.movedfrom
+Library\Bee\artifacts\movedfrom\Unity.Burst.Cecil.Pdb.dll_5249801957048138667.movedfrom
+Library\Bee\artifacts\movedfrom\Unity.Burst.Cecil.Rocks.dll_17063311893354098475.movedfrom
+Library\Bee\artifacts\movedfrom\Unity.Burst.Unsafe.dll_15167415498064704504.movedfrom
+Library\Bee\artifacts\movedfrom\Unity.VisualScripting.Antlr3.Runtime.dll_4584980133397327206.movedfrom
