@@ -860,8 +860,8 @@ MonoBehaviour:
   bullet: {fileID: 0}
   damageText: {fileID: 1633319807168658633, guid: eedd23f530fa4634cba0c0e35c518103, type: 3}
   bloodSplat: {fileID: 6257254731685156379, guid: 788ec3cc80d95cc45a63c3d2f88c33c5, type: 3}
-  currentHealth: 300
-  maxHealth: 300
+  currentHealth: 100
+  maxHealth: 100
   anim: {fileID: 3858022564397238062}
   walkPoint: {x: 0, y: 0, z: 0}
   walkPointRange: 15.5

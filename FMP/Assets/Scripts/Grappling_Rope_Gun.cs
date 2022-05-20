@@ -24,12 +24,19 @@ public class Grappling_Rope_Gun : MonoBehaviour
     }
 
     //Called after Update
+    void Update()
+    {
+       
+        //transform.position = pos.transform.position;
+        //transform.rotation = pos.transform.rotation;
+    }
+
+
     void FixedUpdate()
     {
         DrawRope();
-        transform.position = pos.transform.position;
-        transform.rotation = pos.transform.rotation;
     }
+
 
     void DrawRope()
     {

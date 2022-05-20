@@ -129,7 +129,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   attackrange: {fileID: 1456173887747675748}
-  damage: 35
+  damage: 10
 --- !u!1 &5943746071893821295
 GameObject:
   m_ObjectHideFlags: 0

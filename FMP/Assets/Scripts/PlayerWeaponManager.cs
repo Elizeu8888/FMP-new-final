@@ -29,7 +29,7 @@ public class PlayerWeaponManager : MonoBehaviour
         weaponList = new Weapon[50];
 
         weaponList[0] = new Weapon();
-        weaponList[0].InitWeapon("lava", 15, 0.7f);
+        weaponList[0].InitWeapon("lava", 10, 0.7f);
 
         weaponList[1] = new Weapon();
         weaponList[1].InitWeapon("water", 10, 1.2f);
