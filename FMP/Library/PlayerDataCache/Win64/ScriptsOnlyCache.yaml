@@ -235,9 +235,9 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 10230}
     - Class: 114
-      Script: {instanceID: 10610}
+      Script: {instanceID: 10542}
     - Class: 114
-      Script: {instanceID: 128258}
+      Script: {instanceID: 10612}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -402,9 +402,9 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 10496}
     - Class: 114
-      Script: {instanceID: 10732}
+      Script: {instanceID: 10734}
     - Class: 114
-      Script: {instanceID: 10800}
+      Script: {instanceID: 10802}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 120
@@ -2064,6 +2064,12 @@ ScriptsOnlyBuild:
     className: QuestManager
   - hash:
       serializedVersion: 2
+      Hash: 6379a80b6f7f5dc3ff9d0787f2c7da52
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: MainMenuSCRIP
+  - hash:
+      serializedVersion: 2
       Hash: b5c3dbcb94925c8b595ad16a62b44788
     assemblyName: Cinemachine.dll
     namespaceName: Cinemachine
@@ -2140,14 +2146,8 @@ ScriptsOnlyBuild:
     assemblyName: Unity.VisualScripting.Core.dll
     namespaceName: Unity.VisualScripting
     className: UnityOnSliderValueChangedMessageListener
-  - hash:
-      serializedVersion: 2
-      Hash: 6379a80b6f7f5dc3ff9d0787f2c7da52
-    assemblyName: Assembly-CSharp.dll
-    namespaceName: 
-    className: MainMenuSCRIP
   platform: 19
   scenePathNames:
   - Assets/Scenes/Menu.unity
   - Assets/Scenes/SampleScene.unity
-  playerPath: //NAS6.escg.ac.uk/Users/527000/600/527603/Documents/FMP BUILD/1/FMP.exe
+  playerPath: C:/Users/Elizeu mazzo/Documents/Unity games/FMP/FMP.exe
